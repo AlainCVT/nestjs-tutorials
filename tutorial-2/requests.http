@@ -1,0 +1,84 @@
+# ### GET /
+# GET http://localhost:3000/
+
+# ### GET /messages
+# GET http://localhost:3000/messages
+
+# ### GET /messages/:id
+# GET http://localhost:3000/messages/0
+
+# ### GET /users
+# GET http://localhost:3000/users
+
+# ### POST /users
+# POST http://localhost:3000/users
+# Content-Type: application/json
+
+# {
+#   "id": "1",
+#   "name": "jack",
+#   "password": "new_password"
+# }
+
+# ### GET /users/:id
+# GET http://localhost:3000/users/jack
+
+# ### POST /auth/login
+# POST http://localhost:3000/auth/login
+# Content-Type: application/json
+
+# {
+#   "name": "john",
+#   "password": "the_password"
+# }
+
+# ### GET /auth/profile
+# GET http://localhost:3000/auth/profile
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAiLCJpYXQiOjE3Nzg3NzU4NzIsImV4cCI6MTc4MDA3MTg3Mn0.ZprLfGjJJ6VEdBHzx3v3L7MGSJrwxWbHQLB4evZ0t94
+
+### POST /oauth/token
+POST https://api.mangacollec.com/oauth/token
+Content-Type: application/json
+
+{
+  "client_id":"38fee110b53a75af6cc72f6fb66fa504fc6241e566788f4b2f5b21c25ba2fefb",
+  "client_secret":"060658630f7d199c19ab1cf34ed4e50935c748267e318a24e048d6ab45871da2",
+  "grant_type":"password",
+  "scope":"",
+  "username":"trash.cvt@gmail.com",
+  "password":"!Lupin_RBY-VS-Pato_123!"
+}
+
+### GET /v1/users/me
+GET https://api.mangacollec.com/v1/users/me
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+
+### GET /v2/series
+GET https://api.mangacollec.com/v2/series
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+
+### GET /v2/series/:id
+GET https://api.mangacollec.com/v2/series/a02cf154-af6c-4f08-9a7a-32f7bc229ac8
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+
+### GET /v2/user/:username/collection
+GET https://api.mangacollec.com/v2/user/kamensentai/collection
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+
+### POST /v1/possessions_multiple
+POST https://api.mangacollec.com/v1/possessions_multiple
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+Content-Type: application/json
+
+[
+  { "volume_id": "ad4493ad-1310-404b-ace2-91f3dd4f489a" }
+]
+
+### DELETE /v1/possessions_multiple
+DELETE https://api.mangacollec.com/v1/possessions_multiple
+Authorization: Bearer NiUpjXpoMuZ0fohuOeTrZBThG33T7PVhfGm2gFqTC0M
+Content-Type: application/json
+
+[
+  { "id": "cf8f3fe4-1d44-4a9d-a98f-8160fe99c0fd" }
+]
